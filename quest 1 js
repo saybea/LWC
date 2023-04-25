@@ -1,0 +1,26 @@
+import { LightningElement, api } from 'lwc';
+
+export default class MyComponent extends LightningElement {
+    @api empresa;
+    @api cnpj;
+    @api endereco;
+    @api produto;
+    @api descricao;
+    @api preco;
+    @api oferta1;
+    @api oferta2;
+
+    showDiv2 = true;
+    showDiv3 = true;
+    buttonLabel = 'Ocultar Div 2 e 3';
+
+    handleClick() {
+        this.showDiv2 = !this.showDiv2;
+        this.showDiv3 = !this.showDiv3;
+        if (this.showDiv2 && this.showDiv3) {
+            this.buttonLabel = 'Ocultar Div 2 e 3';
+        } else {
+            this.buttonLabel = 'Mostrar Div 2 e 3';
+        }
+    }
+}
