@@ -1,0 +1,22 @@
+<template>
+	<div>
+		<div class="container">
+			<h2>Empresa</h2>
+			<p>CNPJ: {cnpj}</p>
+			<p>Endereço: {endereco}</p>
+		</div>
+		<div class="container" if:true={showDiv2}>
+			<h2>Produto</h2>
+			<p>Descrição: {descricao}</p>
+			<p>Preço: R$ {preco}</p>
+		</div>
+		<div class="container" if:true={showDiv3}>
+			<h2>Promoção</h2>
+			<p>Oferta 1: {oferta1}</p>
+			<p>Oferta 2: {oferta2}</p>
+		</div>
+		<div class="button-container">
+			<lightning-button label={buttonLabel} onclick={handleClick}></lightning-button>
+		</div>
+	</div>
+</template>
